@@ -86,7 +86,7 @@ for _, row in pto.iterrows():
     absence_type = row["ABSENCE_TYPE"]
     days_off_start_date = row["START_DATE"]
     days_off_end_date = row["END_DATE"]
-
+# verific daca sunt date si daca nu le convertesc in date
     if isinstance(days_off_start_date, datetime):
         days_off_start_date = days_off_start_date.date()
     elif isinstance(days_off_start_date, str):
@@ -96,17 +96,15 @@ for _, row in pto.iterrows():
         days_off_end_date = days_off_end_date.date()
     elif isinstance(days_off_end_date, str):
         days_off_end_date = datetime.strptime(days_off_end_date, "%d-%b-%Y").date()
-
+# eroare pt abrevieri (daca vor fi greseli in fisierul pto)
     if absence_type not in leave_abbr_dict:
         raise KeyError(f"ABSENCE_TYPE-ul '{absence_type}' pentru persoana '{person_number}' nu exista!")
-
+# aici pun abrevierile
     current_date = days_off_start_date
     while current_date <= days_off_end_date:
         current_date_str = current_date.strftime('%Y-%m-%d')
         days_off_per_person[person_number][current_date_str] = leave_abbr_dict[absence_type]
         current_date += timedelta(days=1)
-
-days_off_per_person = {k: dict(v) for k, v in days_off_per_person.items()}
 
 # ADAUGAREA DE DATE IN EXCEL
 # Fill attendance data
