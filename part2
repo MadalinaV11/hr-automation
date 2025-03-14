@@ -5,7 +5,7 @@ from openpyxl.styles import PatternFill, Font, Alignment, Border, Side
 from datetime import datetime, timedelta
 from openpyxl.utils import get_column_letter
 from collections import defaultdict
-
+from calendar import month_name
 
 df = pd.read_excel('Employees.xlsx', sheet_name='Sheet1')
 
@@ -302,6 +302,17 @@ for row in ws.iter_rows(min_row=11, max_row=ws.max_row, min_col=3, max_col=ws.ma
     for cell in row:
         if isinstance(cell.value, (int,float)):  # Only apply to numerical values
             cell.number_format = '0.00'  # Two decimal places
+
+ws["N5"].value = "Foaie colectiva de prezenta (pontaj)"
+ws["N5"].font = Font(name="Aptos Narrow", size=14, underline="single", bold=True)
+ws["N5"].alignment = Alignment(horizontal="center", vertical="center")
+ws.merge_cells("N5:R5")
+ws["D2"].value = "BRILLIO ROMANIA SRL"
+ws.merge_cells("D2:F2")
+ws["D3"].value = "RO 35553895, J05/223/2016"
+ws.merge_cells("D3:F3")
+ws["D4"].value = "Oradea, Str Albacului, nr. 12A"
+ws.merge_cells("D3:F3")
 
 wb.save(output_file)
 print(f"Formatted file saved as: {output_file}")
