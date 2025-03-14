@@ -314,5 +314,33 @@ ws.merge_cells("D3:F3")
 ws["D4"].value = "Oradea, Str Albacului, nr. 12A"
 ws.merge_cells("D3:F3")
 
+# Calculează totalul zilelor din lună
+total_days = (end_date - start_date).days + 1
+
+# Identifică zilele libere care NU sunt în weekend
+public_holidays_weekdays = {str(date.day) for date in holiday_dates if date.weekday() < 5}
+
+# Calculează zilele lucrătoare
+working_days = total_days - len(weekends) - len(public_holidays_weekdays)
+
+month_name_ro = {
+    "January": "Ianuarie", "February": "Februarie", "March": "Martie",
+    "April": "Aprilie", "May": "Mai", "June": "Iunie",
+    "July": "Iulie", "August": "August", "September": "Septembrie",
+    "October": "Octombrie", "November": "Noiembrie", "December": "Decembrie"
+}
+current_month_name = month_name_ro[month_name[month]]
+
+# Creează textul pentru celulă
+luna_text = f"Luna: {current_month_name} - {working_days} zile lucrătoare"
+
+ws["K7"] = luna_text
+ws["K7"].font = Font(size=12, bold=True)
+ws.merge_cells("K7:O7")
+
+ws["U7"] = f"Anul: {year}"
+ws["U7"].font = Font(size=12, bold=True)
+ws.merge_cells("U7:V7")
+
 wb.save(output_file)
 print(f"Formatted file saved as: {output_file}")
