@@ -1,0 +1,130 @@
+[
+    {
+        "name": "Anul Nou",
+        "date": [
+            {
+                "date": "2025\/01\/01",
+                "weekday": "Wed"
+            },
+            {
+                "date": "2025\/01\/02",
+                "weekday": "Thu"
+            }
+        ]
+    },
+    {
+        "name": "Boboteaza",
+        "date": [
+            {
+                "date": "2025\/01\/06",
+                "weekday": "Mon"
+            }
+        ]
+    },
+    {
+        "name": "Sf\u00e2ntul Ioan Botezatorul",
+        "date": [
+            {
+                "date": "2025\/01\/07",
+                "weekday": "Tue"
+            }
+        ]
+    },
+    {
+        "name": "Ziua Unirii Principatelor Rom\u00e2ne",
+        "date": [
+            {
+                "date": "2025\/01\/24",
+                "weekday": "Fri"
+            }
+        ]
+    },
+    {
+        "name": "Pa\u0219tele Ortodox",
+        "date": [
+            {
+                "date": "2025\/04\/18",
+                "weekday": "Fri"
+            },
+            {
+                "date": "2025\/04\/20",
+                "weekday": "Sun"
+            },
+            {
+                "date": "2025\/04\/21",
+                "weekday": "Mon"
+            }
+        ]
+    },
+    {
+        "name": "Ziua Muncii",
+        "date": [
+            {
+                "date": "2025\/05\/01",
+                "weekday": "Thu"
+            }
+        ]
+    },
+    {
+        "name": "Ziua Copilului",
+        "date": [
+            {
+                "date": "2025\/06\/01",
+                "weekday": "Sun"
+            }
+        ]
+    },
+    {
+        "name": "Rusalii",
+        "date": [
+            {
+                "date": "2025\/06\/08",
+                "weekday": "Sun"
+            },
+            {
+                "date": "2025\/06\/09",
+                "weekday": "Mon"
+            }
+        ]
+    },
+    {
+        "name": "Adormirea Maicii Domnului",
+        "date": [
+            {
+                "date": "2025\/08\/15",
+                "weekday": "Fri"
+            }
+        ]
+    },
+    {
+        "name": "Sf\u00e2ntul Andrei",
+        "date": [
+            {
+                "date": "2025\/11\/30",
+                "weekday": "Sun"
+            }
+        ]
+    },
+    {
+        "name": "Ziua Na\u021bional\u0103 a Rom\u00e2niei",
+        "date": [
+            {
+                "date": "2025\/12\/01",
+                "weekday": "Mon"
+            }
+        ]
+    },
+    {
+        "name": "Cr\u0103ciunul",
+        "date": [
+            {
+                "date": "2025\/12\/25",
+                "weekday": "Thu"
+            },
+            {
+                "date": "2025\/12\/26",
+                "weekday": "Fri"
+            }
+        ]
+    }
+]
